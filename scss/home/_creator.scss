@@ -1,0 +1,214 @@
+
+.creator{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    .creator__btn.none{
+        display: flex;
+        background-color: transparent;
+        border: 2px solid rgba(162, 89, 255, 1);
+        color: white;
+        border-radius: 20px;
+        gap: 10px;
+        width: 247px;
+        height: 60px;
+        i{
+            color: rgba(162, 89, 255, 1);
+        }
+    }
+    &__top{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    &__info{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+    }
+    &__btn{
+        display: none;
+        gap: 5px;
+        align-items: center;
+        justify-content: center;
+    }
+    &__cards{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .card__none{
+        display: none;
+    }
+    &__card{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(59, 59, 59, 1);
+        border-radius: 20px;
+        position: relative;
+        padding: 22px 20px;
+        z-index: -1;
+        img{
+            width: 60px;
+            height: 60px;
+        }
+    }
+    &__number{
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 30px;
+        height: 30px;
+        background-color: rgba(43, 43, 43, 1);
+        border-radius: 50%;
+        color: rgba(133, 133, 132, 1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__card__info{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    &__card__title{
+        font-size: 22px;
+        font-weight:600 ;
+        line-height: 30.8px;
+    }
+    &__card__desc{
+        font-size:16px ;
+        font-weight: 400;
+        line-height: 22.4px;
+        color: rgba(133, 133, 132, 1);
+        span{
+            font-size:16px ;
+            font-weight: 400;
+            line-height: 22.4px;
+            color: white;
+        }
+    }
+
+}
+
+
+
+@media (min-width:736px) {
+    .creator .creator__btn.none{
+        display: none;
+    }
+    .creator{
+        &__top{
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+        }
+       
+        &__btn{
+            display: flex;
+            background-color: transparent;
+            border: 2px solid rgba(162, 89, 255, 1);
+            color: white;
+            border-radius: 20px;
+            gap: 10px;
+            width: 247px;
+            height: 60px;
+            i{
+                color: rgba(162, 89, 255, 1);
+            }
+        }
+        &__cards{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+        &__card{
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(59, 59, 59, 1);
+            border-radius: 20px;
+            position: relative;
+            padding: 22px 20px;
+            z-index: -1;
+            img{
+                width: 60px;
+                height: 60px;
+            }
+        }
+
+    }
+    
+}
+
+
+@media (min-width:1200px) {
+    .creator{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: auto 150px;
+        &__top{
+            width: 95%;
+            display: flex;
+            justify-content: space-between;
+        }
+        &__cards{
+    max-width: 1300px;
+
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+        &__info{
+            display: flex;
+            gap: 15px;
+            padding: 20px 30px;
+        }
+        .card__none{
+            display: flex;
+        }
+        &__card{
+            width: 240px;
+            height: 238px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(59, 59, 59, 1);
+            border-radius: 20px;
+            position: relative;
+            padding: 22px 20px;
+            z-index: -1;
+            img{
+                width: 110px;
+                height: 120px;
+            }
+        }
+        &__number{
+            position: absolute;
+            top: 18px;
+            left: 20px;
+            width: 30px;
+            height: 30px;
+            background-color: rgba(43, 43, 43, 1);
+            border-radius: 50%;
+            color: rgba(133, 133, 132, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+    }
+    
+}

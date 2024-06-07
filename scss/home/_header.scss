@@ -1,0 +1,213 @@
+
+
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    padding: 20px 0px;
+    backdrop-filter: blur(10px);
+    background-color: rgba(65, 65, 65, 0.4);
+    z-index: 999;
+    &__logo{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        a{
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            font-size: 23px;
+            font-family: monospace;
+            letter-spacing: -2px;
+        }
+    }
+    &__list.toggle{
+        backdrop-filter: blur(20px);
+        background-color: rgba(0, 0, 0, 0.317);
+    }
+    &__list{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 25px;
+        position: fixed;
+        left: 85%;
+        top: 7%;
+        width: 0;
+        height: 0;
+        backdrop-filter: blur(100px);
+        background-color: rgba(128, 128, 128, 0.358);
+        box-shadow: 0px 0px 10px gray;
+        transition: all 1s;
+        .header__link{
+            display: none;
+        }
+    }
+    &__link{
+        color: white;
+        font-size: 18px;
+        font-family: sans-serif;
+        font-weight: 600;
+        background: transparent;
+            &:hover{
+        color:  rgba(162, 89, 255, 1);
+      
+    }
+    &:hover::after{
+        width: 100%;
+        transform: rotate(0deg);
+        left: 0;
+        bottom: -5px;
+    }
+    position: relative;
+    &::after{
+        content: "";
+        background-color: rgb(95, 89, 255);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        transform: rotate(-90deg);
+        transition: all 1s;
+    }
+.none{
+    display: none;
+}
+
+    }
+    &__auth{
+        display: none;
+        position: relative;
+    }
+ 
+
+    &__bars{
+        background: transparent;
+        border: none;
+        color: white;
+        font-size: 25px;
+
+    }
+    .toggle{
+        display: flex;
+        width: 50%;
+        height: 100vh;
+        left: 0;
+        top: 0;
+        .header__link{
+            display: flex;
+        }
+    }
+}
+
+
+@media (min-width:992px) {
+    .header{
+      &__logo{
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        width: 30%;
+        a{
+            display: flex;
+        gap: 15px;
+        align-items: center;
+        }
+      }
+      &__right{
+        width: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 15px;
+      }
+      &__list{
+       
+        position: static;
+        flex-direction: row;
+        box-shadow: none;
+        height: auto;
+        width: auto;
+        box-shadow: none;
+        background-color: rgba(255, 0, 0, 0);
+        .header__link{
+            display: flex;
+        background:transparent;
+
+        }
+      }
+      &__auth{
+        display: flex;
+        gap: 10px;
+        background-color: blueviolet;
+        color: white;
+        padding: 15px 25px;
+        border-radius: 20px;
+        border: none;
+        font-size: 16px;
+        transition: all 1s;
+        .none{
+            opacity: 0;
+            transition: all 1s;
+            position: absolute;
+        }
+        .star1{
+            width: 0;
+            position: absolute;
+            top: 5px;
+            left: 10px;
+          }
+          .star2{
+            width: 0;
+            position: absolute;
+            top: 5px;
+            right: 25px;
+          }
+          .star3{
+            width: 0;
+            position: absolute;
+            bottom: 5px;
+            right: 25px;
+          }
+          .star4{
+            width: 0;
+            position: absolute;
+            bottom: 5px;
+            left: 10px;
+          }
+        &:hover{
+            .none{
+              opacity: 1;
+            }
+            .star1{
+                position: absolute;
+                top: -13px;
+                left: -23px;
+              }
+              .star2{
+                position: absolute;
+                top: -15px;
+                right: -31px;
+              }
+              .star3{
+                position: absolute;
+                bottom: -35px;
+                right: -22px;
+              }
+              .star4{
+                position: absolute;
+                bottom: -25px;
+                left: -16px;
+              }
+        }
+      }
+      &__bars{
+        display: none;
+      }
+
+        
+  }
+}
