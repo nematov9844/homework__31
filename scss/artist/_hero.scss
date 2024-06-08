@@ -1,4 +1,7 @@
 .hero{
+    &.desctop{
+        display: none;
+    }
     display: flex;
     width: 100%;
     flex-direction: column;
@@ -173,18 +176,53 @@
 }
 
 @media (min-width:768px) {
-    .hero{
+   .hero.mobile{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+.hero{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
+    &__btns{
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        gap: 15px;
+    }
+}
+.hero.desctop{
+ display: none;
+}
+
+}
+
+@media (min-width:992px) {
+    .hero.desctop{
+        display: grid;
+        grid-template-columns: 1fr ;
+        gap: 15px;
+    }
+    .hero{
+        display: grid;
+        gap: 15px;
+        grid-template-columns: 1fr;
+        &__bottom__all{
+            display: grid;
+            grid-template-columns: auto auto;
+        }
         &__btns{
             display: none;
         }
         &__btnsd{
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             gap: 15px;
+            align-items: center;
+            margin-top: 150px;
+            justify-content: center;
         }
     }
-    
+    .hero.mobile{
+        display: none;
+    }
 }

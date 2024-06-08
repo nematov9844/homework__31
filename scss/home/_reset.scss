@@ -15,6 +15,7 @@ body{
 .container{
     width: 85%;
     max-width: 1440px;
+    margin: 0px auto;
 }
 
 .df{
@@ -38,6 +39,7 @@ button{
     backdrop-filter: blur(10px);
     background-color: rgba(0, 0, 0, 0.7);
     box-shadow:  10px 5px 5px  rgb(144, 75, 212);
+    color: white;
     }
     
 }

@@ -18,6 +18,7 @@ body {
 .container {
   width: 85%;
   max-width: 1440px;
+  margin: 0px auto;
 }
 
 .df {
@@ -41,6 +42,7 @@ button:hover {
           backdrop-filter: blur(10px);
   background-color: rgba(0, 0, 0, 0.7);
   box-shadow: 10px 5px 5px rgb(144, 75, 212);
+  color: white;
 }
 
 a {
@@ -51,6 +53,7 @@ a {
 
 .header {
   width: 100%;
+  max-width: none;
   display: flex;
   justify-content: center;
   position: fixed;
@@ -254,6 +257,9 @@ a {
   width: 100%;
   flex-direction: column;
 }
+.hero.desctop {
+  display: none;
+}
 .hero__cards {
   background-image: url("../../IMG/create/artis__hero.svg");
   position: relative;
@@ -415,18 +421,152 @@ a {
   }
 }
 @media (min-width: 768px) {
+  .hero.mobile {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
   .hero {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  }
+  .hero__btns {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    gap: 15px;
+  }
+  .hero.desctop {
+    display: none;
+  }
+}
+@media (min-width: 992px) {
+  .hero.desctop {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .hero {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 1fr;
+  }
+  .hero__bottom__all {
+    display: grid;
+    grid-template-columns: auto auto;
   }
   .hero__btns {
     display: none;
   }
   .hero__btnsd {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 15px;
+    align-items: center;
+    margin-top: 150px;
+    justify-content: center;
+  }
+  .hero.mobile {
+    display: none;
+  }
+}
+.discover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.discover__top {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-around;
+  gap: 15px;
+  padding: 20px 0px;
+}
+.discover__title {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22.4px;
+  color: rgb(133, 133, 132);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 1s;
+}
+.discover__title:hover {
+  color: white;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.621);
+}
+.discover__title:hover span {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.36);
+}
+.discover__title span {
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 9px;
+  font-weight: 400;
+  line-height: 13.2px;
+  color: rgba(255, 255, 255, 0.6);
+}
+.discover__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 25px;
+  justify-content: center;
+  padding: 0px 40px;
+  width: 100%;
+}
+.discover__card {
+  border-radius: 35px;
+  overflow: hidden;
+  background-color: rgb(43, 43, 43);
+}
+.discover__card__top {
+  width: 100%;
+  height: 70%;
+}
+.discover__card__top img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
+.discover__card__down {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 25px;
+}
+.discover__card__title {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 30.8px;
+}
+.discover__card__desc {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.discover__card__desc__title {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22.4px;
+}
+.discover__card__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (min-width: 576px) {
+  .discover__title {
+    font-size: 22px;
+  }
+  .discover__title span {
+    font-size: 16px;
   }
 }
 .footer {
@@ -552,4 +692,7 @@ a {
     margin-left: -50px;
     font-size: 14px;
   }
+}
+body {
+  background-color: rgb(59, 59, 59);
 }
