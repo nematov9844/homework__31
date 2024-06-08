@@ -61,6 +61,20 @@
         justify-content: center;
         font-size: 18px;
     }
+    &__bottom__title{
+        height: 33px;
+        display: flex;
+        justify-content: center;
+    }
+    &__bottom__text{
+        width: 95%;
+        padding: 20px;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 13.2px;
+        color: rgba(204, 204, 204, 1);
+        border-top: 1px solid rgba(133, 133, 132, 1);
+    }
 }
 
 
@@ -99,8 +113,6 @@
             input{
                 width: 80%;
                 height: 50px;
-                border-top-right-radius:0px ;
-                border-bottom-right-radius:0px ;
             }
         }
         &__btn{

@@ -32,11 +32,11 @@ body{
 
 button{
     cursor: pointer;
-    transition: all 1s;
+    transition: all 0.6s;
     &:hover{
-        opacity: 0.7;
+        opacity: 1;
     backdrop-filter: blur(10px);
-    background-color: rgba(243, 179, 245, 0.158);
+    background-color: rgba(0, 0, 0, 0.7);
     box-shadow:  10px 5px 5px  rgb(144, 75, 212);
     }
     

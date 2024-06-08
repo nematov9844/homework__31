@@ -1,0 +1,190 @@
+.hero{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    &__cards{
+        background-image: url("../../IMG/create/artis__hero.svg");
+        position: relative;
+        width: 100%;
+        height: 280px;
+
+    }
+    &__card{
+        position: absolute;
+        bottom: -20%;
+        left: 30%;
+        z-index: 1;
+    }
+
+    &__all{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 40px;
+        padding-top: 70px;
+    }
+    &__title{
+        font-size: 28px;
+        font-weight:600 ;
+        line-height:39.2px ;
+    }
+    &__btns{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    &__btnsd{
+        display: none;
+    }
+    &__btn__left{
+       border: 2px solid rgba(162, 89, 255, 1);
+       border-radius: 20px;
+       height: 60px; 
+       color: white;
+       background-color: rgba(162, 89, 255, 1);
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       gap: 10px;
+    }
+    &__btn__right{
+       border: 2px solid rgba(162, 89, 255, 1);
+       border-radius: 20px;
+       height: 60px;     
+       background: transparent;
+       color: white;
+       align-items: center;
+       justify-content: center;
+       gap: 10px;
+       i{
+        color: rgba(162, 89, 255, 1);
+       }
+    }
+    &__totals{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__total{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    &__total__title{
+        font-size:22px ;
+        font-weight:700; 
+        line-height:35.2px; 
+    }
+    &__total__desc{
+       font-size: 16px;
+       font-weight: 400;
+        line-height: 22.4px;
+    }
+    &__info{
+        display: flex;
+        flex-direction:column ;
+        gap: 15px;
+    }
+    &__bio{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    &__bio__title{
+       color: rgba(133, 133, 132, 1);
+       font-size: 16px;
+       font-family: 400;
+       line-height: 22.4px;
+    }
+    &__bio__desc{
+        color: rgba(255, 255, 255, 1);
+        font-size: 16px;
+        font-family: 400;
+        line-height:22.4px ;
+    }
+    &__links{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    &__links__title{
+        color: rgba(133, 133, 132, 1);
+        font-size: 16px;
+       font-family: 400;
+       line-height: 22.4px;
+    }
+    &__links__desc{
+        color: rgba(133, 133, 132, 1);
+        display: flex;
+        gap: 3px;
+        align-items: center;
+        i{
+            font-size: 24px;
+        }
+    }
+}
+
+
+@media (min-width:576px) {
+    .hero{
+        &__cards{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+
+        }
+        &__all{
+            padding: 40px;
+            width: 100%;
+            max-width: 510px;
+            padding-top: 400px;
+        }
+        &__card{
+            position: absolute;
+            bottom: -20%;
+            left: 80px;
+            z-index: 1;
+        }
+        &__btns{
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+        }
+        &__btn__left{
+            width: 100%;
+            max-width: 186px;
+        }
+        &__btn__right{
+           width: 100%;
+           max-width: 145px;
+        }
+        &__totals{
+            width: 100%;
+            max-width: 510px;
+            display: flex;
+            justify-content: center;
+        }
+        &__total{
+            flex: 1;
+        }
+
+    }
+    
+}
+
+@media (min-width:768px) {
+    .hero{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        &__btns{
+            display: none;
+        }
+        &__btnsd{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+    }
+    
+}
