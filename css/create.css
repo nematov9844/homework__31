@@ -62,6 +62,7 @@ a {
           backdrop-filter: blur(10px);
   background-color: rgba(65, 65, 65, 0.4);
   z-index: 999;
+  height: 70px;
 }
 .header__logo {
   display: flex;

@@ -35,6 +35,8 @@ window.addEventListener("scroll", () => {
     var time = h + " : " + m + " : " + s ;
     document.getElementById("clock").innerText = time;
     document.getElementById("clock").textContent = time;
+    document.getElementById("clock2").innerText = time;
+    document.getElementById("clock2").textContent = time;
 
     setTimeout(showTime, 1000);
   }
