@@ -7,9 +7,12 @@
     flex-direction: column;
     &__cards{
         background-image: url("../../IMG/create/artis__hero.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
         position: relative;
         width: 100%;
         height: 280px;
+        margin-top: 70px;
 
     }
     &__card{

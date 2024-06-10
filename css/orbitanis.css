@@ -87,7 +87,7 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 25px;
+  gap: 15px;
   position: fixed;
   left: 85%;
   top: 7%;
@@ -404,12 +404,20 @@ a {
     align-items: center;
     justify-content: center;
   }
+  .hero__create {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
   .hero__clocks {
     width: 300px;
     height: 320px;
   }
   .hero .hero__img__top {
     width: 100%;
+  }
+  .hero__create__info {
+    width: 60%;
   }
 }
 .collection {
@@ -449,7 +457,9 @@ a {
 .collection__card {
   display: flex;
   flex-direction: column;
+  box-shadow: 0px 0px 10px white;
   gap: 10px;
+  border-radius: 25px;
 }
 .collection .second {
   display: none;
@@ -463,15 +473,19 @@ a {
 .collection__card__bottom {
   display: flex;
   gap: 10px;
+  padding: 10px;
 }
 .collection__card__bottom__title {
   font-size: 22px;
   font-weight: 600;
   line-height: 30.8px;
+  padding: 0px 10px;
 }
 .collection__bottom__desc {
   display: flex;
   gap: 10px;
+  padding: 10px 10px;
+  padding-top: 0px;
 }
 .collection__bottom__desc h2 {
   font-size: 16px;

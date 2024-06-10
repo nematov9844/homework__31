@@ -169,7 +169,13 @@
         align-items: center;
         justify-content: center;
     }
-    .hero{
+ .hero{
+
+    &__create{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
     &__clocks{
     width:300px;
     height: 320px;
@@ -177,5 +183,8 @@
     .hero__img__top{
     width: 100%;
     }
+    &__create__info{
+        width: 60%;
     }
+ }
 }
