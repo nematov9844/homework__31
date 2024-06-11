@@ -1,0 +1,108 @@
+
+
+.collection{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    align-items: center;
+    gap: 15px;
+    &__title{
+        width: 330px;
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 39.2px;
+    }
+    &__desc{
+        width: 330px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22.4px;
+    }
+    &__cards{
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &__card{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .second{
+        display: none;
+    }
+    .first{
+        display: none;
+    }
+    &__card__hero__img{
+        width: 100%;
+    }
+    &__card__bottom{
+        display: flex;
+        gap: 10px;
+    }
+    &__card__bottom__title{
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 30.8px;
+    }
+    &__bottom__desc{
+        display: flex;
+        gap: 10px;
+        h2{
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 22.4px;
+        }
+    }
+}
+
+@media (min-width:736px) {
+   .collection{
+    &__title{
+        width: 90%;
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 39.2px;
+    }
+    &__desc{
+        width: 90%;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22.4px;
+    }
+    &__cards{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+    .first{
+        display: flex;
+    }
+   }
+    
+}
+@media (min-width:1080px) {
+    .collection{
+        &__title{
+            width: 90%;
+            font-size: 28px;
+            font-weight: 600;
+            line-height: 39.2px;
+        }
+        &__desc{
+            width: 90%;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 22.4px;
+        }
+        .second{
+            display: flex;
+        }
+    }
+    
+}
